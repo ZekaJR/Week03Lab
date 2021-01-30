@@ -26,6 +26,8 @@ public class AgeCalculatorServlet extends HttpServlet {
         boolean valid = true;
         String ageString = request.getParameter("age");
         
+        request.setAttribute("age", ageString);
+        
         try {
             age = Integer.parseInt(ageString) + 1;
         }
